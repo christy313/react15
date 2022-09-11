@@ -25,7 +25,7 @@ const App = () => {
           <h2>our menu</h2>
           <div className="underline"></div>
         </div>
-        <Categories categories={categories} filterItems={filterItems} />
+        <Categories filterItems={filterItems} categories={categories} />
         <Menu items={menuItems} />
       </section>
     </main>

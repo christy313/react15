@@ -6,10 +6,10 @@ const Categories = ({ categories, filterItems }) => {
       {categories.map((category, i) => {
         return (
           <button
-            onClick={() => filterItems(category)}
             type="button"
             className="filter-btn"
             key={i}
+            onClick={() => filterItems(category)}
           >
             {category}
           </button>
