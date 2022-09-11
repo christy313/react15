@@ -1,6 +1,6 @@
 ## Summary
 
-While adding or removing a category in a menu list with filter buttons, the menu & filter buttons would automatically adjust.
+Render category buttons dynamically and filter menu items.
 
 ![](./public/images/05-menu.gif)
 
