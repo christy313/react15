@@ -1,9 +1,25 @@
 ## Summary
 
+While adding or removing a category in a menu list with filter buttons, the menu & filter buttons would automatically adjust.
+
+![](./public/images/05-menu.gif)
+
+## Note
+
+[JavaScript: Remove Duplicates from an Array](https://wsvincent.com/javascript-remove-duplicates-array/)
+
 ## File structure
 
 ```
-
+.
+├── README.md
+└── src
+    ├── App.js
+    ├── Categories.js
+    ├── Menu.js
+    ├── data.js
+    ├── index.css
+    └── index.js
 ```
 
 ## Available Scripts
