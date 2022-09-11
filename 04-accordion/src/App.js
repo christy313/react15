@@ -8,9 +8,9 @@ const App = () => {
       <div className="container">
         <h2>Questions and answers about login</h2>
         <section className="info">
-          {data.map((question) => {
-            return <SingleQuestion key={question.id} {...question} />;
-          })}
+          {data.map((question) => (
+            <SingleQuestion key={question.id} {...question} />
+          ))}
         </section>
       </div>
     </main>

@@ -8,7 +8,7 @@ const SingleQuestion = ({ title, info }) => {
     <article className="question">
       <header>
         <h4>{title}</h4>
-        <button className="btn" onClick={() => setShowInfo(!showInfo)}>
+        <button onClick={() => setShowInfo(!showInfo)} className="btn">
           {showInfo ? <BiMinus size={20} /> : <BiPlus size={20} />}
         </button>
       </header>
