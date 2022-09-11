@@ -1,8 +1,26 @@
 ## Summary
 
+- [React Icons](https://react-icons.github.io/react-icons)
+
+- Click right arrow and left to switch reviews
+
+- Click "Surprise Me" button to get random review
+
+![](./public/03-reviews.gif)
+
 ## File structure
 
 ```
+.
+├── README.md
+├── package-lock.json
+├── package.json
+└── src
+    ├── App.js
+    ├── Review.js
+    ├── data.js
+    ├── index.css
+    └── index.js
 
 ```
 
