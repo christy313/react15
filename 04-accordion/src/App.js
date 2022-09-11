@@ -1,6 +1,6 @@
 import React from "react";
 import data from "./data";
-import SingleQuestion from "./Question";
+import SingleQuestion from "./SingleQuestion";
 
 const App = () => {
   return (

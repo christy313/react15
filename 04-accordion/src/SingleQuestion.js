@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { BiPlus, BiMinus } from "react-icons/bi";
 
-const Question = ({ title, info }) => {
+const SingleQuestion = ({ title, info }) => {
   const [showInfo, setShowInfo] = useState(false);
 
   return (
@@ -17,4 +17,4 @@ const Question = ({ title, info }) => {
   );
 };
 
-export default Question;
+export default SingleQuestion;

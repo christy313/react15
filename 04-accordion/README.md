@@ -1,12 +1,8 @@
-#### Idea
+## Summary
 
-[uidesigndaily](https://uidesigndaily.com/posts/sketch-accordion-website-day-1175)
+- idea: [uidesigndaily](https://uidesigndaily.com/posts/sketch-accordion-website-day-1175)
 
-![](./idea.png);
-
-#### React Icons
-
-[react icons](https://react-icons.github.io/react-icons/)
+- [React Icons](https://react-icons.github.io/react-icons)
 
 ```
 npm install react-icons --save
@@ -18,3 +14,31 @@ const Component = () => {
   return <FaHome className='icon'></FaHome>;
 };
 ```
+
+- Toggle the info paragraph while clicking the plus or minus sign.
+
+![](./public/03-reviews.gif)
+
+## File structure
+
+```
+.
+├── README.md
+├── package-lock.json
+├── package.json
+└── src
+    ├── App.js
+    ├── SingleQuestion.js
+    ├── data.js
+    ├── index.css
+    └── index.js
+```
+
+## Available Scripts
+
+In the project directory, you can run:
+
+### `npm start`
+
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
