@@ -1,5 +1,9 @@
 ## Summary
 
+- Toggle the info paragraph while clicking the plus or minus sign.
+
+![](./public/04-accordion.gif)
+
 - idea: [uidesigndaily](https://uidesigndaily.com/posts/sketch-accordion-website-day-1175)
 
 - [React Icons](https://react-icons.github.io/react-icons)
@@ -14,10 +18,6 @@ const Component = () => {
   return <FaHome className='icon'></FaHome>;
 };
 ```
-
-- Toggle the info paragraph while clicking the plus or minus sign.
-
-![](./public/03-reviews.gif)
 
 ## File structure
 
