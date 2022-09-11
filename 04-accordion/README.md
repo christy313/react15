@@ -21,7 +21,7 @@ const Component = () => {
 
 ### note
 
-There is a warning "Warning: React does not recognize the `pId` prop on a DOM element" if using ai from react-icons. To solve this problem use bi instead of ai.
+There is a warning "Warning: React does not recognize the `pId` prop on a DOM element" if using ai from react-icons. Using bi instead of ai to solve this problem.
 
 ## File structure
 
