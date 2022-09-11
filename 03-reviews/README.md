@@ -2,9 +2,9 @@
 
 - [React Icons](https://react-icons.github.io/react-icons)
 
-- Click right arrow and left to switch reviews
+- Click the right arrow and left to switch reviews
 
-- Click "Surprise Me" button to get random review
+- Click the "Surprise Me" button to get a random review
 
 ![](./public/03-reviews.gif)
 
