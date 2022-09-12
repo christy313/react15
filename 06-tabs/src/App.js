@@ -3,9 +3,6 @@ import { FaAngleDoubleRight } from "react-icons/fa";
 
 const url = "https://course-api.com/react-tabs-project";
 
-// job desc
-// buttons
-
 const App = () => {
   const [loading, setLoading] = useState(true);
   const [jobs, setJobs] = useState([]);
@@ -43,7 +40,15 @@ const App = () => {
         <div className="jobs-center">
           <div className="btn-container">
             {jobs.map((job, index) => {
-              return <button key={job.id}>{job.company}</button>;
+              return (
+                <button
+                  onClick={() => setValue(index)}
+                  key={job.id}
+                  className={`job-btn ${index === value && "active-btn"}`}
+                >
+                  {job.company}
+                </button>
+              );
             })}
           </div>
           <article className="job-info">
