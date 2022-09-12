@@ -20,6 +20,14 @@ const App = () => {
     fetchJobs();
   }, []);
 
+  if (loading) {
+    return (
+      <section className="section loading">
+        <h1>loading...</h1>
+      </section>
+    );
+  }
+
   return <div></div>;
 };
 
