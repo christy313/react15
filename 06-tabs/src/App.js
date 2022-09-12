@@ -1,12 +1,16 @@
 import React, { useState, useEffect } from "react";
-import { FaAngleDoubleRight } from "react-icons/fa";
+
+import Title from "./components/Title";
+import Loading from "./components/Loading";
+import CompanyButtons from "./components/CompanyButtons";
+import JobInfo from "./components/JobInfo";
 
 const url = "https://course-api.com/react-tabs-project";
 
 const App = () => {
   const [loading, setLoading] = useState(true);
   const [jobs, setJobs] = useState([]);
-  const [value, setValue] = useState(0);
+  const [jobIndex, setJobIndex] = useState(0);
 
   const fetchJobs = async () => {
     const res = await fetch(url);
@@ -20,35 +24,18 @@ const App = () => {
     fetchJobs();
   }, []);
 
-  if (loading) {
-    return (
-      <section className="section loading">
-        <h1>loading...</h1>
-      </section>
-    );
-  }
+  if (loading) return <Loading />;
 
-  const { company, dates, duties, title } = jobs[value];
   return (
     <section className="section">
-      <div className="title">
-        <h2>experience</h2>
-        <div className="underline"></div>
-      </div>
+      <Title />
       <div className="jobs-center">
-        <article className="job-info">
-          <h3>{title}</h3>
-          <h4>{company}</h4>
-          <p className="job-date">{dates}</p>
-          {duties.map((duty, index) => {
-            return (
-              <div key={index} className="job-desc">
-                <FaAngleDoubleRight className="job-icon" />
-                <p>{duty}</p>
-              </div>
-            );
-          })}
-        </article>
+        <CompanyButtons
+          jobs={jobs}
+          jobIndex={jobIndex}
+          setJobIndex={setJobIndex}
+        />
+        <JobInfo jobs={jobs} jobIndex={jobIndex} />
       </div>
     </section>
   );
