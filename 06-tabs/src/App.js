@@ -36,7 +36,7 @@ const App = () => {
         <h2>experiences</h2>
         <div className="underline"></div>
       </div>
-      <div className="job-center">
+      <div className="jobs-center">
         <div className="btn-container">
           {jobs.map((job, index) => (
             <button
