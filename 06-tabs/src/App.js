@@ -3,14 +3,24 @@ import { FaAngleDoubleRight } from "react-icons/fa";
 
 const url = "https://course-api.com/react-tabs-project";
 
-// loading
-// whole section overview
-// api
 // job desc
 // buttons
 
 const App = () => {
   const [loading, setLoading] = useState(true);
+  const [jobs, setJobs] = useState([]);
+
+  const fetchJobs = async () => {
+    const res = await fetch(url);
+    const newJobs = await res.json();
+
+    setJobs(newJobs);
+    setLoading(false);
+  };
+
+  useEffect(() => {
+    fetchJobs();
+  }, []);
 
   if (loading) {
     return (
