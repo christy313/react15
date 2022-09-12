@@ -1,14 +1,10 @@
-## IN ACTION
-
-[Portfolio](https://gatsby-strapi-portfolio-project.netlify.app/)
-
 ## Summary
 
+Render company buttons dynamically and sync company buttons with job descriptions.
 
-![]()
+![](./public/06-tabs.gif)
 
-## Note
-
+Ref: [Portfolio](https://gatsby-strapi-portfolio-project.netlify.app/)
 
 ## File structure
 
@@ -17,6 +13,11 @@
 ├── README.md
 └── src
     ├── App.js
+    ├── components
+    │   ├── CompanyButtons.js
+    │   ├── JobInfo.js
+    │   ├── Loading.js
+    │   └── Title.js
     ├── index.css
     └── index.js
 ```
