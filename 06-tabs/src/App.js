@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { FaAngleDoubleRight } from "react-icons/fa";
 
 const url = "https://course-api.com/react-tabs-project";
@@ -10,6 +10,16 @@ const url = "https://course-api.com/react-tabs-project";
 // buttons
 
 const App = () => {
+  const [loading, setLoading] = useState(true);
+
+  if (loading) {
+    return (
+      <div className="section loading">
+        <h1>loading...</h1>
+      </div>
+    );
+  }
+
   return (
     <div>
       <section className="section">
