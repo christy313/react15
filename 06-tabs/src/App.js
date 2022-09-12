@@ -38,7 +38,15 @@ const App = () => {
       <div className="jobs-center">
         <div className="btn-container">
           {jobs.map((item, index) => {
-            return <button key={item.id}>{item.company}</button>;
+            return (
+              <button
+                onClick={() => setValue(index)}
+                key={item.id}
+                className={`job-btn ${index === value && "active-btn"}`}
+              >
+                {item.company}
+              </button>
+            );
           })}
         </div>
         <article className="job-info">
