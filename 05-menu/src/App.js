@@ -1,4 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
+import Menu from "./Menu";
+import items from "./data";
+
 const App = () => {
   return (
     <main>
@@ -8,6 +11,7 @@ const App = () => {
           <div className="underline"></div>
         </div>
       </section>
+      <Menu items={items} />
     </main>
   );
 };
