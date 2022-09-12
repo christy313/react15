@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
+
 import Title from "./components/Title";
 import Loading from "./components/Loading";
 import CompanyButtons from "./components/CompanyButtons";
-import { FaAngleDoubleRight } from "react-icons/fa";
+import JobInfo from "./components/JobInfo";
 
 const url = "https://course-api.com/react-tabs-project";
 
@@ -25,8 +26,6 @@ const App = () => {
 
   if (loading) return <Loading />;
 
-  const { title, company, dates, duties } = jobs[jobIndex];
-
   return (
     <section className="section">
       <Title />
@@ -36,17 +35,7 @@ const App = () => {
           jobIndex={jobIndex}
           setJobIndex={setJobIndex}
         />
-        <article className="job-info">
-          <h3>{title}</h3>
-          <h4>{company}</h4>
-          <p className="job-date">{dates}</p>
-          {duties.map((duty, index) => (
-            <div key={index} className="job-desc">
-              <FaAngleDoubleRight className="job-icon" />
-              <p>{duty}</p>
-            </div>
-          ))}
-        </article>
+        <JobInfo jobs={jobs} jobIndex={jobIndex} />
       </div>
     </section>
   );
