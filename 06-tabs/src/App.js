@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Title from "./components/Title";
 import Loading from "./components/Loading";
+import CompanyButtons from "./components/CompanyButtons";
 import { FaAngleDoubleRight } from "react-icons/fa";
 
 const url = "https://course-api.com/react-tabs-project";
@@ -30,17 +31,11 @@ const App = () => {
     <section className="section">
       <Title />
       <div className="jobs-center">
-        <div className="btn-container">
-          {jobs.map((job, index) => (
-            <button
-              className={`job-btn ${index === jobIndex && "active-btn"}`}
-              onClick={() => setJobIndex(index)}
-              key={job.id}
-            >
-              {job.company}
-            </button>
-          ))}
-        </div>
+        <CompanyButtons
+          jobs={jobs}
+          jobIndex={jobIndex}
+          setJobIndex={setJobIndex}
+        />
         <article className="job-info">
           <h3>{title}</h3>
           <h4>{company}</h4>
