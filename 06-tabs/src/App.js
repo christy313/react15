@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+import Title from "./components/Title";
+import Loading from "./components/Loading";
 import { FaAngleDoubleRight } from "react-icons/fa";
 
 const url = "https://course-api.com/react-tabs-project";
@@ -20,22 +22,13 @@ const App = () => {
     fetchJobs();
   }, []);
 
-  if (loading) {
-    return (
-      <section className="section loading">
-        <h1>loading...</h1>
-      </section>
-    );
-  }
+  if (loading) return <Loading />;
 
   const { title, company, dates, duties } = jobs[jobIndex];
 
   return (
     <section className="section">
-      <div className="title">
-        <h2>experiences</h2>
-        <div className="underline"></div>
-      </div>
+      <Title />
       <div className="jobs-center">
         <div className="btn-container">
           {jobs.map((job, index) => (

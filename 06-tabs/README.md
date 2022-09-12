@@ -13,7 +13,12 @@
 ## File structure
 
 ```
-
+.
+├── README.md
+└── src
+    ├── App.js
+    ├── index.css
+    └── index.js
 ```
 
 ## Available Scripts
