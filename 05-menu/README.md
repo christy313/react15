@@ -1,9 +1,25 @@
 ## Summary
 
+Render category buttons dynamically and filter menu items.
+
+![](./public/images/05-menu.gif)
+
+## Note
+
+[JavaScript: Remove Duplicates from an Array](https://wsvincent.com/javascript-remove-duplicates-array/)
+
 ## File structure
 
 ```
-
+.
+├── README.md
+└── src
+    ├── App.js
+    ├── Categories.js
+    ├── Menu.js
+    ├── data.js
+    ├── index.css
+    └── index.js
 ```
 
 ## Available Scripts
