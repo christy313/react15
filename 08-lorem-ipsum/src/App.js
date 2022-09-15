@@ -11,10 +11,9 @@ const App = () => {
     if (count <= 0) {
       amount = 1;
     }
-    if (count > 8) {
+    if (count > data.length) {
       amount = 8;
     }
-    console.log(data.length);
     setText(data.slice(0, amount));
   };
 
