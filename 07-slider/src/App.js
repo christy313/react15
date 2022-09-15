@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
-import { FiChevronRight, FiChevronLeft } from "react-icons/fi";
 import { FaQuoteRight } from "react-icons/fa";
 import data from "./data";
 
 import Title from "./components/Title";
 import ButtonLeft from "./components/ButtonLeft";
+import ButtonRight from "./components/ButtonRight";
 
 const App = () => {
   const [people, setPeople] = useState(data);
@@ -59,10 +59,7 @@ const App = () => {
           );
         })}
         <ButtonLeft setIndex={setIndex} index={index} />
-
-        <button className="next" onClick={() => setIndex(index + 1)}>
-          <FiChevronRight />
-        </button>
+        <ButtonRight setIndex={setIndex} index={index} />
       </div>
     </section>
   );
