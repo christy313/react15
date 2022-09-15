@@ -1,15 +1,22 @@
 ## Summary
 
+Generate lorem ipsum paragraphs by entering the input number.
 
-![]()
+![](./public/08-lorem-ipsum.gif)
+
+Idea: [Hipster Ipsum](https://hipsum.co/)
 
 ## File structure
 
 ```
-
+.
+├── README.md
+└── src
+    ├── App.js
+    ├── data.js
+    ├── index.css
+    └── index.js
 ```
-
-## Notes
 
 ## Available Scripts
 
