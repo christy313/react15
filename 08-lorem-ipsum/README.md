@@ -3,6 +3,8 @@
 
 ![]()
 
+Idea: [Hipster Ipsum](https://hipsum.co/)
+
 ## File structure
 
 ```

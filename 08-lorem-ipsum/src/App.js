@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import data from "./data";
 
 const App = () => {
-  return <h2>lorem ipsum project setup</h2>;
+  return <section className="section-center"></section>;
 };
 
 export default App;
