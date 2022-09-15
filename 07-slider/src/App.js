@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
-import { FaQuoteRight } from "react-icons/fa";
 import data from "./data";
 
 import Title from "./components/Title";
 import ButtonLeft from "./components/ButtonLeft";
 import ButtonRight from "./components/ButtonRight";
+import Article from "./components/Article";
 
 const App = () => {
   const [people, setPeople] = useState(data);
@@ -12,13 +12,9 @@ const App = () => {
 
   useEffect(() => {
     const lastIndex = people.length - 1;
-    if (index < 0) {
-      setIndex(lastIndex);
-    }
 
-    if (index > lastIndex) {
-      setIndex(0);
-    }
+    if (index < 0) setIndex(lastIndex);
+    if (index > lastIndex) setIndex(0);
   }, [index, people]);
 
   useEffect(() => {
@@ -34,13 +30,9 @@ const App = () => {
       <Title />
       <div className="section-center">
         {people.map((person, personIndex) => {
-          const { id, name, image, title, quote } = person;
           let position = "nextSlide";
 
-          if (personIndex === index) {
-            position = "activeSlide";
-          }
-
+          if (personIndex === index) position = "activeSlide";
           if (
             personIndex === index - 1 ||
             (index === 0 && personIndex === people.length - 1)
@@ -48,15 +40,7 @@ const App = () => {
             position = "lastSlide";
           }
 
-          return (
-            <article className={position} key={id}>
-              <img src={image} alt={name} className="person-img" />
-              <h4>{name}</h4>
-              <p className="title">{title}</p>
-              <p className="text">{quote}</p>
-              <FaQuoteRight className="icon" />
-            </article>
-          );
+          return <Article {...person} position={position} />;
         })}
         <ButtonLeft setIndex={setIndex} index={index} />
         <ButtonRight setIndex={setIndex} index={index} />
