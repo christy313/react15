@@ -1,6 +1,6 @@
 ## Summary
 
-Generate lorem ipsum paragraphs by enter input number.
+Generate lorem ipsum paragraphs by entering the input number.
 
 ![](./public/08-lorem-ipsum.gif)
 
