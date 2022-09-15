@@ -4,6 +4,7 @@ import { FaQuoteRight } from "react-icons/fa";
 import data from "./data";
 
 import Title from "./components/Title";
+import ButtonLeft from "./components/ButtonLeft";
 
 const App = () => {
   const [people, setPeople] = useState(data);
@@ -57,9 +58,8 @@ const App = () => {
             </article>
           );
         })}
-        <button className="prev" onClick={() => setIndex(index - 1)}>
-          <FiChevronLeft />
-        </button>
+        <ButtonLeft setIndex={setIndex} index={index} />
+
         <button className="next" onClick={() => setIndex(index + 1)}>
           <FiChevronRight />
         </button>
