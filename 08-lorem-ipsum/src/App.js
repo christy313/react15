@@ -14,9 +14,10 @@ const App = () => {
     <section className="section-center">
       <h3>tired of boring lorem ipsum</h3>
       <form className="lorem-form" onSubmit={handleSubmit}>
-        <label htmlFor="">paragraphs:</label>
+        <label htmlFor="count">paragraphs:</label>
         <input
           type="number"
+          id="count"
           onChange={(e) => setCount(e.target.value)}
           value={count}
           min="1"
