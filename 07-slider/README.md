@@ -1,6 +1,6 @@
 ## Summary
 
-A reviews sliders with 
+A review of sliders with 
 
 - Click the right/left button to show the next/previous slider.
 
@@ -8,24 +8,44 @@ A reviews sliders with
 
 - If clicking the right/left buttons, clean previous `setInterval()`.
 
-![]()
+![](./public/07-reviews.gif)
 
 Ref: [Gatsby-Airtable Project](https://gatsby-airtable-design-project.netlify.app/)
 
 ## File structure
 
 ```
+.
+├── README.md
+└── src
+    ├── App.js
+    ├── components
+    │   ├── Article.js
+    │   ├── ButtonLeft.js
+    │   ├── ButtonRight.js
+    │   └── Title.js
+    ├── data.js
+    ├── index.css
+    └── index.js
 ```
 
 ## Notes
 
-### 1. Display all sliders with flex to make them in the same row and use CSS `transform: translateX();` to adjust the position of every slider.
+### 1. Display and only show the middle slider
 
-### 2. Add class with 'lastSlide', 'activeSlide' and 'nextSlide', it represent from left, middle, and to the right.
+Display all sliders with flex to make them in the same row and use CSS `transform: translateX();` to adjust the position of every slider.
 
-### 3. Put all slides in the right hand side first, when the person index matches the index state, change class of the person index from 'nextSlide' into 'activeSlide'
+### 2. Add class to adjust the appearance
 
-### 4. Use `setIndex(index - 1)` and `setIndex(index + 1)` to switch the slides, and `useEffect()` to control the edge case:
+Add class with 'lastSlide', 'activeSlide' and 'nextSlide', it represent from left, middle, and to the right.
+
+### 3. Check the active slider with index of the data
+
+Put all slides on the right-hand side first, when the person index matches the index state, change the class of the person index from 'nextSlide' into 'activeSlide'
+
+### 4. Switch slider with `setIndex()`
+
+Use `setIndex(index - 1)` and `setIndex(index + 1)` to switch the slides, and `useEffect()` to control the edge case:
 
 ```javascript
 useEffect(() => {
@@ -40,7 +60,9 @@ useEffect(() => {
 }, [index, people]);
 ```
 
-### 5. `setInterval()` with index + 1 to make the slides move automatically
+### 5. Move slider automatically
+
+`setInterval()` with index + 1 to make the slides move automatically
 
 ```javascript
 useEffect(() => {
@@ -50,7 +72,9 @@ useEffect(() => {
 }, [index]);
 ```
 
-### 6. Get [Return value](https://developer.mozilla.org/en-US/docs/Web/API/setInterval#return_value) from `setInterval()` and when clicking the next or prev button, it cleared the previous `setInterval(`) by `clearInterval()`.
+### 6. If index changes, clean the `setInterval()` function
+
+Get [Return value](https://developer.mozilla.org/en-US/docs/Web/API/setInterval#return_value) from `setInterval()` and when clicking the next or previous button, it cleared the previous `setInterval(`) by `clearInterval()`.
 
 ## Available Scripts
 
