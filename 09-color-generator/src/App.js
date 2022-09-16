@@ -5,10 +5,16 @@ import Values from "values.js";
 
 const App = () => {
   const [color, setColor] = useState("");
+  const [error, setError] = useState(false);
   const [list, setList] = useState(new Values("#f12345").all(10));
 
   const handleSubmit = (e) => {
-    setList(new Values(color).all(10));
+    try {
+      setList(new Values(color).all(10));
+    } catch (error) {
+      setError(true);
+      console.log(error);
+    }
     e.preventDefault();
   };
 
@@ -18,6 +24,7 @@ const App = () => {
         <h3>color generator</h3>
         <form onSubmit={handleSubmit}>
           <input
+            className={`error ? 'error': null`}
             type="text"
             value={color}
             onChange={(e) => setColor(e.target.value)}
