@@ -4,10 +4,18 @@ Enter hex color to generate tints and shades.
 
 Library: [values.js](https://github.com/noeldelgado/values.js)
 
+![](./public/09-color-generator.gif)
+
 ## File structure
 
 ```
-
+.
+├── README.md
+└── src
+    ├── App.js
+    ├── SingleColor.js
+    ├── index.css
+    └── index.js
 ```
 
 ## Notes
