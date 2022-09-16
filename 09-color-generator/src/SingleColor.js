@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import rgbToHex from "./utils";
 
 const SingleColor = ({ weight, rgb, hexColor, index }) => {
   const [alert, setAlert] = useState(false);
@@ -11,6 +10,7 @@ const SingleColor = ({ weight, rgb, hexColor, index }) => {
     const timeout = setTimeout(() => {
       setAlert(false);
     }, 2000);
+
     return () => clearTimeout(timeout);
   }, [alert]);
 
@@ -25,7 +25,7 @@ const SingleColor = ({ weight, rgb, hexColor, index }) => {
     >
       <p className="percent-value">{weight}%</p>
       <p className="color-value">{hexValue}</p>
-      {alert && <p>copied to clipboard</p>}
+      {alert && <p className="alert">copied to clipboard</p>}
     </article>
   );
 };

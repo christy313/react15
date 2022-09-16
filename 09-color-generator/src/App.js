@@ -9,13 +9,13 @@ const App = () => {
   const [list, setList] = useState(new Values("#f12345").all(10));
 
   const handleSubmit = (e) => {
+    e.preventDefault();
     try {
       setList(new Values(color).all(10));
     } catch (error) {
       setError(true);
       console.log(error);
     }
-    e.preventDefault();
   };
 
   return (
@@ -24,11 +24,11 @@ const App = () => {
         <h3>color generator</h3>
         <form onSubmit={handleSubmit}>
           <input
-            className={`error ? 'error': null`}
+            className={`${error ? "error" : null}`}
             type="text"
             value={color}
             onChange={(e) => setColor(e.target.value)}
-            placeholder="#f123345"
+            placeholder="#f12345"
           />
           <button className="btn" type="submit">
             submit
