@@ -6,22 +6,30 @@ import Values from "values.js";
 const App = () => {
   const [color, setColor] = useState("");
   const [error, setError] = useState(false);
-  const [list, setList] = useState([]);
+  const [list, setList] = useState(new Values("#f12345").all(10));
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("hi");
+
+    try {
+      setList(new Values(color).all(10));
+    } catch (error) {
+      setError(true);
+      console.log(error);
+    }
   };
+
   return (
     <>
       <section className="container">
         <h3>color generator</h3>
         <form onSubmit={handleSubmit}>
           <input
-            type="text"
+            className={`${error ? "error" : null}`}
             value={color}
+            type="text"
             onChange={(e) => setColor(e.target.value)}
-            placeholder="#f15025"
+            placeholder="#f12345"
           />
           <button className="btn" type="submit">
             submit
@@ -29,7 +37,16 @@ const App = () => {
         </form>
       </section>
       <section className="colors">
-        <h4>list goes here</h4>
+        {list.map((color, index) => {
+          return (
+            <SingleColor
+              key={index}
+              hexColor={color.hex}
+              {...color}
+              index={index}
+            />
+          );
+        })}
       </section>
     </>
   );
