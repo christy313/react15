@@ -10,6 +10,10 @@ Library: [values.js](https://github.com/noeldelgado/values.js)
 
 ```
 
+## Notes
+
+[Clipboard.writeText()](https://developer.mozilla.org/en-US/docs/Web/API/Clipboard/writeText)
+
 ## Available Scripts
 
 In the project directory, you can run:
