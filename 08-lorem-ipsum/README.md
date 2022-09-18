@@ -2,6 +2,8 @@
 
 Generate lorem ipsum paragraphs by entering the input number.
 
+[Live Demo](https://christy313.github.io/react15-project08)
+
 ![](./public/08-lorem-ipsum.gif)
 
 Idea: [Hipster Ipsum](https://hipsum.co/)
