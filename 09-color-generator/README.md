@@ -4,6 +4,8 @@ Enter hex color to generate tints and shades.
 
 Library: [values.js](https://github.com/noeldelgado/values.js)
 
+[Live Demo](https://christy313.github.io/react15-project09)
+
 ![](./public/09-color-generator.gif)
 
 ## File structure
