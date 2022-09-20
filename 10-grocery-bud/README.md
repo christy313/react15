@@ -1,14 +1,22 @@
 ## Summary
 
+CRUD grocery list
+
 ## File structure
 
 ```
-
+.
+└── src
+    ├── Alert.js
+    ├── App.js
+    ├── List.js
+    ├── index.css
+    └── index.js
 ```
 
 ## Future improvement
 
-Set visibility:none for being not to change the height of the alert
+Set `visibility: hidden` for being not to change the height of the alert
 
 ## Available Scripts
 
