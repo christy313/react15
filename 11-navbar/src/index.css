@@ -188,6 +188,9 @@ nav {
 }
 .show-container {
   height: 10rem;
+  
+  /* Another solution for the links height */
+  /* height: auto; */
 }
 @media screen and (min-width: 800px) {
   .nav-center {
@@ -229,4 +232,14 @@ nav {
   .social-icons a:hover {
     color: var(--clr-primary-7);
   }
+}
+
+code {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem;
+  padding: 1rem;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 20px;
 }

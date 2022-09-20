@@ -5,6 +5,7 @@ const App = () => {
   return (
     <>
       <Navbar />
+      <code>Memorize the height with useRef() for links</code>
     </>
   );
 };
