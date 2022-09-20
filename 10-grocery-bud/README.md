@@ -6,6 +6,10 @@
 
 ```
 
+## Future improvement
+
+Set visibility:none for being not to change the height of the alert
+
 ## Available Scripts
 
 In the project directory, you can run:
