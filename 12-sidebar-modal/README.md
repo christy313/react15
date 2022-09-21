@@ -8,11 +8,13 @@
 .
 └── src
     ├── App.js
-    ├── Home.js
-    ├── Modal.js
-    ├── Sidebar.js
+    ├── components
+    │   ├── Home.js
+    │   ├── Modal.js
+    │   └── Sidebar.js
     ├── context.js
-    ├── data.js
+    ├── data
+    │   └── data.js
     ├── index.css
     ├── index.js
     └── logo.svg
