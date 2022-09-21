@@ -1,7 +1,8 @@
 import React from "react";
-import Modal from "./Modal";
-import Sidebar from "./Sidebar";
-import Home from "./Home";
+
+import Modal from "./components/Modal";
+import Sidebar from "./components/Sidebar";
+import Home from "./components/Home";
 
 const App = () => {
   return (
