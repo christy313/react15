@@ -2,7 +2,8 @@ import React from "react";
 import Modal from "./Modal";
 import Sidebar from "./Sidebar";
 import Home from "./Home";
-function App() {
+
+const App = () => {
   return (
     <>
       <Home />
@@ -10,6 +11,6 @@ function App() {
       <Sidebar />
     </>
   );
-}
+};
 
 export default App;
