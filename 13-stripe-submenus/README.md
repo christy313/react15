@@ -1,5 +1,7 @@
 ## Summary
 
+Imitating the stripe submenu: hover the link to show sub-links inside.
+
 ## File structure
 
 ```
