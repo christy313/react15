@@ -2,6 +2,10 @@
 
 Imitating the stripe submenu: hover the link to show sub-links inside.
 
+[Live Demo](https://christy313.github.io/react15-project13/)
+
+![](./src/images/13-stripe-submenus.webp)
+
 ## File structure
 
 ```
