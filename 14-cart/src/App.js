@@ -2,12 +2,13 @@ import React from "react";
 import { useGlobalContext } from "./context";
 
 // components
-import Navbar from "./Navbar";
+import Navbar from "./components/Navbar";
 import CartContainer from "./CartContainer";
 // items
 
-function App() {
+const App = () => {
   const { loading } = useGlobalContext();
+
   if (loading) {
     return (
       <div className="loading">
@@ -21,6 +22,6 @@ function App() {
       <CartContainer />
     </main>
   );
-}
+};
 
 export default App;
