@@ -10,9 +10,7 @@ Cocktail search with React router.
 
 1. [TheCocktailDB](https://www.thecocktaildb.com/)
 
-2. React Router Fix
-
-[Fix](https://dev.to/dance2die/page-not-found-on-netlify-with-react-router-58mc)
+2. React Router [Fix](https://dev.to/dance2die/page-not-found-on-netlify-with-react-router-58mc)
 
 3. CRA Fix
 
