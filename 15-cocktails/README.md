@@ -8,13 +8,13 @@ Cocktail search with React router.
 
 ## Note
 
-### [TheCocktailDB](https://www.thecocktaildb.com/)
+1. [TheCocktailDB](https://www.thecocktaildb.com/)
 
-#### React Router Fix
+2. React Router Fix
 
-(Fix)[https://dev.to/dance2die/page-not-found-on-netlify-with-react-router-58mc]
+[Fix](https://dev.to/dance2die/page-not-found-on-netlify-with-react-router-58mc)
 
-#### CRA Fix
+3. CRA Fix
 
 Modified below script in package.json file to fix the deploy issue in Netlify with React router.
 
