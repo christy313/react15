@@ -10,16 +10,46 @@ Cocktail search with React router.
 
 1. [TheCocktailDB](https://www.thecocktaildb.com/)
 
-2. React Router [Fix](https://dev.to/dance2die/page-not-found-on-netlify-with-react-router-58mc)
+2. Deployment router issue in Github pages
 
-3. CRA Fix
+  - a. Install react-router-dom at least version 6
 
-Modified below script in package.json file to fix the deploy issue in Netlify with React router.
+  - b. `import { HashRouter as Router, Routes, Route } from "react-router-dom";`
 
-```
-"build": "CI= react-scripts build",
-```
+  - c. See below reference
 
+    ```js
+    const App = () => {
+      return (
+        <div>
+          <Router>
+            <Navbar />
+            <Routes>
+              <Route exact path="/" element={<Home />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/cocktail/:id" element={<SingleCocktail />} />
+              <Route path="/*" element={<Error />} />
+            </Routes>
+          </Router>
+        </div>
+      );
+    };
+
+    export default App;
+    ```
+
+3. React Router on Netlify issue
+
+  - a. [Fix](https://dev.to/dance2die/page-not-found-on-netlify-with-react-router-58mc)
+
+  - b. CRA Fix
+
+    Modified below script in package.json file to fix the deploy issue in Netlify with React router.
+
+    ```json
+    "build": "CI= react-scripts build",
+    ```
+    
 ## File structure
 
 ```
