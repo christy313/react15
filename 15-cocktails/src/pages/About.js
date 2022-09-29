@@ -5,10 +5,9 @@ const About = () => {
     <section className="section about-section">
       <h1 className="section-title">about us</h1>
       <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut commodi
-        facilis, qui tempore aliquam est ea, illo laborum a dolorum pariatur
-        aspernatur deserunt enim placeat vero delectus. Autem unde, ratione
-        reiciendis, in a ad, debitis tempore molestiae vitae modi adipisci.
+        A cocktail is an alcoholic mixed drink. Most commonly, cocktails are
+        either a combination of spirits, or one or more spirits mixed with other
+        ingredients such as tonic water, fruit juice, flavored syrup, or cream.
       </p>
     </section>
   );
